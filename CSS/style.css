@@ -70,7 +70,7 @@ a {
   border-radius: 0px 0px 10px 10px;
 }
 
-#renderContent1 {
+#about1 {
   height: 300px;
   width: auto;
   display: flex;
@@ -83,15 +83,15 @@ a {
   padding-top: 100px;
 }
 
-#renderContent1,
-#introduction {
+#about1,
+#introductionAbout1 {
   color: #feb062;
   font-weight: bolder;
   font-size: 35px;
 }
 
-#renderContent1,
-#firstContent {
+#about1,
+#firstContentAbout {
   color: white;
   font-weight: normal;
   font-size: 25px;
@@ -99,7 +99,7 @@ a {
   width: 100%;
 }
 
-#renderContent2 {
+#about2 {
   height: 300px;
   width: auto;
   display: flex;
@@ -108,8 +108,8 @@ a {
   font-size: 17px;
 }
 
-#renderContent2,
-#introduction2 {
+#about2,
+#introductionAbout2 {
   color: black;
   font-weight: bolder;
   font-size: 23px;
@@ -117,9 +117,52 @@ a {
   margin-left: 50px;
 }
 
-#renderContent2,
-#secondContent {
+#about2,
+#secondContentAbout {
   font-weight: normal;
   font-size: 17px;
   margin: 50px;
+}
+
+#MealPlan {
+  height: auto;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+#mealPlanIntroduction {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#skillsIntroduction {
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#skills {
+  height: auto;
+  width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+#image {
+  width: 800px;
+  height: 700px;
+  background-color: #feb062;
+  padding: 10px;
 }
