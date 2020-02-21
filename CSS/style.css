@@ -1,4 +1,6 @@
 * {
+  width: auto;
+  height: auto;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,6 +28,13 @@
 
 a {
   color: whitesmoke;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#link {
+  color: #feb062;
   font-size: 26px;
   text-decoration: none;
   font-weight: bold;
@@ -59,4 +68,58 @@ a {
   height: 20px;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
+}
+
+#renderContent1 {
+  height: 300px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 85px;
+  padding-left: 300px;
+  padding-right: 300px;
+  padding-bottom: 300px;
+  padding-top: 100px;
+}
+
+#renderContent1,
+#introduction {
+  color: #feb062;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+#renderContent1,
+#firstContent {
+  color: white;
+  font-weight: normal;
+  font-size: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+#renderContent2 {
+  height: 300px;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  font-size: 17px;
+}
+
+#renderContent2,
+#introduction2 {
+  color: black;
+  font-weight: bolder;
+  font-size: 23px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+#renderContent2,
+#secondContent {
+  font-weight: normal;
+  font-size: 17px;
+  margin: 50px;
 }
