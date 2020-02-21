@@ -40,18 +40,24 @@ const renderContent = document.getElementById("renderContent");
 function generateMeals(json) {
   renderContent.innerHTML = null;
 
-  const mealTitle = document.createElement("div");
-  mealTitle.innerHTML = json.meals[0].strMeal;
-  renderContent.appendChild(mealTitle);
-
   const mealImg = document.createElement("img");
   mealImg.setAttribute("src", json.meals[0].strMealThumb);
   mealImg.classList.add("meal-img");
   renderContent.appendChild(mealImg);
 
+  const box = document.createElement("div");
+  box.classList.add("desc-box");
+  renderContent.appendChild(box);
+
+  const mealTitle = document.createElement("div");
+  mealTitle.innerHTML = json.meals[0].strMeal;
+  mealTitle.classList.add("meal-title");
+  box.appendChild(mealTitle);
+
   const mealText = document.createElement("p");
   mealText.innerHTML = json.meals[0].strInstructions;
-  renderContent.appendChild(mealText);
+  mealText.classList.add("meal-text");
+  box.appendChild(mealText);
 }
 
 generateAlphabetLetters();

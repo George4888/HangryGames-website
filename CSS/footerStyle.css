@@ -1,3 +1,8 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
 #footer {
   background: #857671;
   width: 100%;
@@ -41,4 +46,26 @@ img {
 
 #info {
   color: whitesmoke;
+}
+
+.meal-title {
+  font-size: 30px;
+  color: whitesmoke;
+  margin: 30px;
+}
+
+.meal-text {
+  font-size: 20px;
+  color: whitesmoke;
+  width: 680px;
+}
+
+.meal-img {
+  height: 581px;
+  width: 581px;
+}
+
+.desc-box {
+  margin-left: 50px;
+  flex-direction: column;
 }
