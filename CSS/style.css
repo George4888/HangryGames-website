@@ -45,13 +45,13 @@ a {
 #first-input {
   width: 800px;
   height: 40px;
-  border: #1d97c1 solid;
+  border: #857671 solid;
   border-radius: 10px;
   margin: 10px 10px 0px 0px;
 }
 
 #yellow-link {
-  background: #1d97c1;
+  background: #857671;
   margin-left: 10px;
   font-size: 15px;
   display: block;
