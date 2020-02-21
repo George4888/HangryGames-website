@@ -13,33 +13,50 @@ function generateAlphabetLetters() {
 
     footer.appendChild(lettersContainer);
     lettersContainer.appendChild(letterDOM);
+    letterDOM.addEventListener("click", clickOnLetter);
   }
 }
 
 generateAlphabetLetters();
 
-function generateUrl(url) {
-  fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(json) {
-      renderMeals(json.meals);
-    });
+function hideImg() {
+  document.getElementById("renderContent").style.display = "none";
 }
 
-const letters = document
-  .getElementById("footer")
-  .getElementsByClassName("span");
+function clickOnLetter(event) {
+  hideImg();
+  getMealsFromServer(event.target.innerText);
+}
 
-for (const element of letters) {
-  element.addEventListener("click", function() {
-    const elementVal = element.innerText;
-    console.log(elementVal);
-    if (elementVal) {
-      generateUrl(
-        `https://www.themealdb.com/api/json/v1/1/search.php?f=${elementVal}`
-      );
-    }
-  });
+function getMealsFromServer(letter) {
+  const url = generateUrl(letter);
+  fetch(url)
+    .then(r => r.json())
+    .then(json => {
+      generateMeal(json, letter);
+    });
+  console.log(url);
+}
+
+function generateUrl(letter) {
+  return `https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`;
+}
+
+const renderContent = document.getElementById("renderContent");
+
+function generateMeals(mealName, letter, renderContent) {
+  renderContent.innerText = null;
+
+  const mealTitle = document.createElement("div");
+  mealTitle.innerText = mealName.strMeal;
+  renderContent.appendChild(mealName);
+
+  const mealImg = document.createElement("img");
+  mealImg.setAttribute("src", mealData.strMealThumb);
+  mealImg.classList.add("meal-img");
+  renderContent.appendChild(mealImg);
+
+  const mealText = document.createElement("p");
+  mealText.innerText = mealData.strInstructions;
+  container.appendChild(mealText);
 }
