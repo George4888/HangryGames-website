@@ -1,5 +1,9 @@
 console.log("start");
 
+
+
+
+
 function generateAlphabetLetters() {
   const footer = document.getElementById("footer");
   const lettersContainer = document.createElement("div");
@@ -17,11 +21,12 @@ function generateAlphabetLetters() {
   }
 }
 
-generateAlphabetLetters();
-
 function clickOnLetter(event) {
   getMealsFromServer(event.target.innerText);
 }
+
+
+
 
 function getMealsFromServer(letter) {
   const url = generateUrl(letter);
@@ -43,17 +48,18 @@ function generateMeals(json) {
   renderContent.innerHTML = null;
 
   const mealTitle = document.createElement("div");
-  mealTitle.innerHTML = json.strMeal;
+  mealTitle.innerHTML = json.meals[0].strMeal;
   renderContent.appendChild(mealTitle);
 
   const mealImg = document.createElement("img");
-  mealImg.setAttribute("src", json.strMealThumb);
+  mealImg.setAttribute("src", json.meals[0].strMealThumb);
   mealImg.classList.add("meal-img");
   renderContent.appendChild(mealImg);
 
   const mealText = document.createElement("p");
-  mealText.innerHTML = json.strInstructions;
-  container.appendChild(mealText);
+  mealText.innerHTML = json.meals[0].strInstructions;
+  renderContent.appendChild(mealText);
 }
 
+generateAlphabetLetters();
 clickOnLetter();
