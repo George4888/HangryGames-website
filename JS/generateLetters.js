@@ -33,7 +33,7 @@ function getMealsFromServer(letter) {
   fetch(url)
     .then(r => r.json())
     .then(json => {
-      generateMeal(json, letter);
+      generateMeals(json, letter);
     });
   console.log(url);
 }
@@ -44,7 +44,7 @@ function generateUrl(letter) {
 
 const renderContent = document.getElementById("renderContent");
 
-function generateMeals(mealName, letter, renderContent) {
+function generateMeals(mealName, renderContent) {
   renderContent.innerText = null;
 
   const mealTitle = document.createElement("div");
@@ -52,12 +52,12 @@ function generateMeals(mealName, letter, renderContent) {
   renderContent.appendChild(mealName);
 
   const mealImg = document.createElement("img");
-  mealImg.setAttribute("src", mealData.strMealThumb);
+  mealImg.setAttribute("src", mealName.strMealThumb);
   mealImg.classList.add("meal-img");
   renderContent.appendChild(mealImg);
 
   const mealText = document.createElement("p");
-  mealText.innerText = mealData.strInstructions;
+  mealText.innerText = mealName.strInstructions;
   container.appendChild(mealText);
 }
 
