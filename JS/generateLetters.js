@@ -19,12 +19,7 @@ function generateAlphabetLetters() {
 
 generateAlphabetLetters();
 
-function hideImg() {
-  document.getElementById("renderContent").style.display = "none";
-}
-
 function clickOnLetter(event) {
-  hideImg(event.target.innerText);
   getMealsFromServer(event.target.innerText);
 }
 
@@ -44,20 +39,20 @@ function generateUrl(letter) {
 
 const renderContent = document.getElementById("renderContent");
 
-function generateMeals(mealName, renderContent) {
-  renderContent.innerText = null;
+function generateMeals(json) {
+  renderContent.innerHTML = null;
 
   const mealTitle = document.createElement("div");
-  mealTitle.innerText = mealName.strMeal;
-  renderContent.appendChild(mealName);
+  mealTitle.innerHTML = json.strMeal;
+  renderContent.appendChild(mealTitle);
 
   const mealImg = document.createElement("img");
-  mealImg.setAttribute("src", mealName.strMealThumb);
+  mealImg.setAttribute("src", json.strMealThumb);
   mealImg.classList.add("meal-img");
   renderContent.appendChild(mealImg);
 
   const mealText = document.createElement("p");
-  mealText.innerText = mealName.strInstructions;
+  mealText.innerHTML = json.strInstructions;
   container.appendChild(mealText);
 }
 
