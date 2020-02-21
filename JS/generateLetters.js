@@ -24,7 +24,7 @@ function hideImg() {
 }
 
 function clickOnLetter(event) {
-  hideImg();
+  hideImg(event.target.innerText);
   getMealsFromServer(event.target.innerText);
 }
 
@@ -60,3 +60,5 @@ function generateMeals(mealName, letter, renderContent) {
   mealText.innerText = mealData.strInstructions;
   container.appendChild(mealText);
 }
+
+clickOnLetter();
