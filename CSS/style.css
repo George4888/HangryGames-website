@@ -1,72 +1,62 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-
 
 #header-container {
-    background: black;
+  background: #1d97c1;
 }
-
 
 #first-paragraph {
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    padding-bottom: 25px;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 25px;
 }
 
-
 #link-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding-left: 290px;
-    padding-right: 290px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 290px;
+  padding-right: 290px;
 }
 
 a {
-    color: white;
-    font-size: 26px;
-    text-decoration: none;
-    font-weight: bold;
+  color: whitesmoke;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-
 #Description {
-    padding-top: 15px;
-    font-size: 50px;
+  padding-top: 15px;
+  font-size: 50px;
+  color: whitesmoke;
 }
 
 #input-container {
-    padding-left: 300px;
+  padding-left: 300px;
+  background: #22d1ee;
 }
 
 #first-input {
-    width: 800px;
-    height: 40px;
-    border-radius: 10px;
+  width: 800px;
+  height: 40px;
+  border: #1d97c1 solid;
+  border-radius: 10px;
+  margin: 10px 10px 0px 0px;
 }
 
 #yellow-link {
-    background: #fdca37;
-    font-size: 15px;
-    display: block;
-    width: 200px;
-    height: 20px;
-    text-align: center;
-    border-radius: 0px 0px 10px 10px;
+  background: #1d97c1;
+  margin-left: 10px;
+  font-size: 15px;
+  display: block;
+  width: 200px;
+  height: 20px;
+  text-align: center;
+  border-radius: 0px 0px 10px 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
