@@ -1,9 +1,5 @@
 console.log("start");
 
-
-
-
-
 function generateAlphabetLetters() {
   const footer = document.getElementById("footer");
   const lettersContainer = document.createElement("div");
@@ -24,9 +20,6 @@ function generateAlphabetLetters() {
 function clickOnLetter(event) {
   getMealsFromServer(event.target.innerText);
 }
-
-
-
 
 function getMealsFromServer(letter) {
   const url = generateUrl(letter);
