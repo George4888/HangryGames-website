@@ -10,6 +10,20 @@
 
 #header-container {
   background: #857671;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#header-container p {
+  padding-top: 60px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-style: bold;
+}
+#logo {
+  height: 200px;
 }
 
 #first-paragraph {
@@ -24,6 +38,7 @@
   justify-content: space-evenly;
   padding-left: 290px;
   padding-right: 290px;
+  background-color: #857671;
 }
 
 a {
@@ -42,8 +57,9 @@ a {
 
 #Description {
   padding-top: 15px;
-  font-size: 50px;
+  font-size: 26px;
   color: whitesmoke;
+
 }
 
 #input-container {
@@ -235,4 +251,17 @@ a {
 #image3 {
   margin-right: -400px;
   margin-bottom: 20px;
+}
+
+
+#images-container {
+  background-color: #feb062;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#images-container img {
+  height: 270px;
 }

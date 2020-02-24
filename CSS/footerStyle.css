@@ -18,15 +18,10 @@
   display: flex;
 }
 
-.img {
-  display: flex;
-  justify-content: center;
-  background: #feb062;
+#renderContent img {
+  height: 250px;
 }
 
-img {
-  height: 581px;
-}
 
 #letters {
   display: flex;
